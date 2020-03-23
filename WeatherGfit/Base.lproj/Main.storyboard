@@ -30,6 +30,18 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem title="About" id="OjS-Iq-X4q"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pdj-Mm-EGM"/>
+                                    <barButtonItem style="plain" id="o0T-Ai-9mt">
+                                        <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="QBX-to-ZSH">
+                                            <rect key="frame" x="73" y="4" width="178" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="pageIndicatorTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="pageControlTapped:" destination="F0P-4z-QPe" eventType="valueChanged" id="PnF-Et-fAS"/>
+                                            </connections>
+                                        </pageControl>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="r2w-6F-fwY"/>
                                     <barButtonItem image="list.bullet" catalog="system" id="IYU-FC-51a">
                                         <connections>
@@ -95,6 +107,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="VjB-wL-aWb" id="7va-TP-jkO"/>
                         <outlet property="imageView" destination="A5M-EE-bXY" id="otI-BW-gWf"/>
+                        <outlet property="pageControl" destination="QBX-to-ZSH" id="RyU-9J-cED"/>
                         <outlet property="placeLabel" destination="SSY-N2-Hfz" id="YZZ-dr-5H0"/>
                         <outlet property="summaryLabel" destination="t5R-iH-jqf" id="C0V-6U-OpR"/>
                         <outlet property="temperatureLabel" destination="NuN-er-vIW" id="ySz-mD-VaV"/>
