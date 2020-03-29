@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ja-HR-BgJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ja-HR-BgJ">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +33,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="pdj-Mm-EGM"/>
                                     <barButtonItem style="plain" id="o0T-Ai-9mt">
                                         <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="QBX-to-ZSH">
-                                            <rect key="frame" x="73" y="4" width="178" height="37"/>
+                                            <rect key="frame" x="73.5" y="3.5" width="178" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="pageIndicatorTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -92,13 +92,72 @@
                                     <constraint firstAttribute="height" constant="225" id="rI7-8i-OnV"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="djw-42-BU1">
+                                <rect key="frame" x="0.0" y="225" width="320" height="299"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="80" id="tMF-5P-7ZN" customClass="DailyTableViewCell" customModule="WeatherGfit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tMF-5P-7ZN" id="tZf-gc-XoB">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sleet" translatesAutoresizingMaskIntoConstraints="NO" id="Y7U-Mq-Nc3">
+                                                    <rect key="frame" x="0.0" y="5" width="70" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ThisWeekday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt5-u2-K8l">
+                                                    <rect key="frame" x="78" y="5" width="160" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="188°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnM-pT-Odw">
+                                                    <rect key="frame" x="246" y="5" width="59" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="rain rain go away come again another day" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boV-mc-Q9L">
+                                                    <rect key="frame" x="78" y="30" width="160" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-89°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eq-CE-J1Z">
+                                                    <rect key="frame" x="246" y="44" width="59" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dailyHighLabel" destination="LnM-pT-Odw" id="kRD-hD-ShT"/>
+                                            <outlet property="dailyImageView" destination="Y7U-Mq-Nc3" id="ZTb-Wu-qUn"/>
+                                            <outlet property="dailyLowLabel" destination="9eq-CE-J1Z" id="gIB-Qd-bMM"/>
+                                            <outlet property="dailySummaryView" destination="boV-mc-Q9L" id="lcw-e4-kfq"/>
+                                            <outlet property="dailyWeekdayLabel" destination="Vt5-u2-K8l" id="ouJ-LH-yiR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="nKW-x8-bpl" firstAttribute="top" secondItem="djw-42-BU1" secondAttribute="bottom" id="IfG-mK-dIA"/>
                             <constraint firstItem="nKW-x8-bpl" firstAttribute="bottom" secondItem="xxK-Wh-sTN" secondAttribute="bottom" id="Jtz-cC-AX6"/>
+                            <constraint firstItem="xxK-Wh-sTN" firstAttribute="trailing" secondItem="djw-42-BU1" secondAttribute="trailing" id="KS1-NR-SRZ"/>
+                            <constraint firstItem="djw-42-BU1" firstAttribute="top" secondItem="Od3-PW-2su" secondAttribute="bottom" id="PHa-QP-3uC"/>
                             <constraint firstItem="Od3-PW-2su" firstAttribute="leading" secondItem="xxK-Wh-sTN" secondAttribute="leading" id="QEO-zh-c1W"/>
                             <constraint firstItem="nKW-x8-bpl" firstAttribute="trailing" secondItem="xxK-Wh-sTN" secondAttribute="trailing" id="UIv-iI-ELV"/>
                             <constraint firstItem="xxK-Wh-sTN" firstAttribute="trailing" secondItem="Od3-PW-2su" secondAttribute="trailing" id="Uwc-cP-biw"/>
+                            <constraint firstItem="djw-42-BU1" firstAttribute="leading" secondItem="xxK-Wh-sTN" secondAttribute="leading" id="eso-oL-8sE"/>
                             <constraint firstItem="Od3-PW-2su" firstAttribute="top" secondItem="xxK-Wh-sTN" secondAttribute="top" id="mVH-Xd-rOT"/>
                             <constraint firstItem="nKW-x8-bpl" firstAttribute="leading" secondItem="xxK-Wh-sTN" secondAttribute="leading" id="o5V-Ts-ykv"/>
                         </constraints>
@@ -110,6 +169,7 @@
                         <outlet property="pageControl" destination="QBX-to-ZSH" id="RyU-9J-cED"/>
                         <outlet property="placeLabel" destination="SSY-N2-Hfz" id="YZZ-dr-5H0"/>
                         <outlet property="summaryLabel" destination="t5R-iH-jqf" id="C0V-6U-OpR"/>
+                        <outlet property="tableView" destination="djw-42-BU1" id="lOA-0d-Zwi"/>
                         <outlet property="temperatureLabel" destination="NuN-er-vIW" id="ySz-mD-VaV"/>
                     </connections>
                 </viewController>
@@ -203,6 +263,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list.bullet" catalog="system" width="64" height="44"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="sleet" width="512" height="512"/>
     </resources>
 </document>
