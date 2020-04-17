@@ -9,7 +9,6 @@
 import UIKit
 
 private let dateFormatter: DateFormatter = {
-    print("Creation of date formatter")
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEEE, MMM d"
     return dateFormatter
@@ -30,6 +29,14 @@ class LocationDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("DidLoad executing for locationIndex = \(locationIndex)")
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("WillAppear executing for locationIndex = \(locationIndex)")
         clearUserInterface()
         tableView.delegate = self
         tableView.dataSource = self
@@ -37,6 +44,7 @@ class LocationDetailViewController: UIViewController {
         collectionView.dataSource = self
         
         updateUserInterface()
+
     }
     
     func clearUserInterface() {
